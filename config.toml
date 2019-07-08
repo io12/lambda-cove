@@ -2,3 +2,12 @@ baseURL = "/"
 languageCode = "en-us"
 title = "Lambda Cove"
 theme = "hugo-xmin"
+
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 0
+[[menu.main]]
+name = "About"
+url = "/about/"
+weight = 1
