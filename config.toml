@@ -3,6 +3,13 @@ languageCode = "en-us"
 title = "Lambda Cove"
 theme = "hugo-xmin"
 
+[params]
+footer = """[Email](mailto:blevy@protonmail.com)
+| [GitHub](https://github.com/io12)
+| [GitLab](https://gitlab.com/)
+| [crates.io](https://crates.io/users/io12)
+| [ArchWiki](https://wiki.archlinux.org/)"""
+
 [[menu.main]]
 name = "Home"
 url = "/"
