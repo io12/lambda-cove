@@ -4,7 +4,8 @@ title = "Lambda Cove"
 theme = "hugo-xmin"
 
 [params]
-footer = """[Email](mailto:blevy@protonmail.com)
+footer = """[Site Code](https://github.com/io12/lambda-cove)
+| [Email](mailto:blevy@protonmail.com)
 | [GitHub](https://github.com/io12)
 | [crates.io](https://crates.io/users/io12)
 | [ArchWiki](https://wiki.archlinux.org/)"""
