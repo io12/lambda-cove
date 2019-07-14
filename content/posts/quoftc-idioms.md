@@ -4,7 +4,7 @@ date = "2019-07-12T23:38:20-04:00"
 tags = ["c", "idioms", "compilers"]
 +++
 
-About two years ago, I wrote a compiler for a C-like programming language called [Quoft](https://github.com/io12/quoftc). I wrote this compiler in C. In hindsight, this was a bad idea. C has subjected programmers to a thousand hells of buffer overflows, heap corruptions, and stale-pointer bugs. Rust provides high-level abstractions, guarantees of safety, and performance comparable with C. However, I decided to use C, because it was the language I knew best at the time, and because C compilers are widely-available as a build dependency. It's lack of modern features prompted creative ways to mimic the functionality of newer languages.
+About two years ago, I wrote a compiler for a C-like programming language called [Quoft](https://github.com/io12/quoftc). I wrote this compiler in C. In hindsight, this was a bad idea. C has subjected programmers to a thousand hells of buffer overflows, heap corruptions, and stale-pointer bugs. Rust provides high-level abstractions, guarantees of safety, and performance comparable with C. However, I decided to use C, because it was the language I knew best at the time, and because C compilers are widely-available as a build dependency. Its lack of modern features prompted creative ways to mimic the functionality of newer languages.
 
 ## Pseudo-infallible allocation
 
@@ -257,7 +257,7 @@ int foo_get_val(struct foo *);
 
 Includers of `foo.h` can't access the fields of `struct foo`. They will only be able to interact with it through the public "method" `foo_get_val()`.
 
-In a class-based language, this would be the equivalent of all members being declared private. Here is an example of how this might look in Java.
+In a class-based language, this would be the equivalent of all fields being declared private. Here is an example of how this might look in Java.
 
 ```java
 class Foo {
