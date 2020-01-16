@@ -31,7 +31,7 @@ Some languages are designed for logic proofs, such as
 have much more expressive type systems than commonly-used languages,
 which makes them well-suited for proofs.
 
-This blog post will focus on Coq ~~because that\'s the only one I know
+This blog post will focus on Coq ~~because that's the only one I know
 well~~.
 
 Propositions as types
@@ -44,7 +44,7 @@ of $x$, where $x$ is a natural number, $x >= 0$). In the Curry-Howard
 Isomorphism, propositions are types and proofs are values. The concept
 of "a proposition having a proof" is "a type having a value." For
 example, `true` is a proof of the proposition `bool`, and `10` is a
-proof of the proposition `int`. This isn\'t very meaningful. Not all
+proof of the proposition `int`. This isn't very meaningful. Not all
 programs are useful when thought of as proofs, and not all proofs are
 useful when thought of as programs. The isomorphism is more useful for
 fancier types/propositions.
@@ -53,10 +53,10 @@ True as unit type
 =================
 
 In logic, $\top$ is a proposition that is defined to be true. It has a
-proof, by definition. In some programming languages, there\'s a type
+proof, by definition. In some programming languages, there's a type
 (called the [unit type](https://en.wikipedia.org/wiki/Unit_type)) that
-has only one value. In C, it would be an empty struct, since there\'s
-only one possible value an empty struct can have, except C doesn\'t
+has only one value. In C, it would be an empty struct, since there's
+only one possible value an empty struct can have, except C doesn't
 allow empty structs 😦. In Haskell and Rust, the unit type is an empty
 tuple `()`. Since a type having a value is isomorphic with a proposition
 having a proof, the unit type is isomorphic with $\top$. The unit type
