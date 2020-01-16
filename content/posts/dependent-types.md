@@ -39,8 +39,8 @@ Propositions as types
 
 In logic, propositions are statements that can be true or false, proven
 or unproven. Examples of propositions are $1 = 0$, $2 + 2 = 4$, "the
-sky is orange," and $\forall x \in \mathbb N, x >= 0$ (for all values
-of $x$, where $x$ is a natural number, $x >= 0$). In the Curry-Howard
+sky is orange," and $\forall x \in \mathbb N, x >= 0$ (for all natural numbers
+$x$, $x >= 0$). In the Curry-Howard
 Isomorphism, propositions are types and proofs are values. The concept
 of "a proposition having a proof" is "a type having a value." For
 example, `true` is a proof of the proposition `bool`, and `10` is a
