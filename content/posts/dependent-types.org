@@ -3,7 +3,7 @@
 #+tags[]: types
 
 * Static typing
-Certain languages are considered "statically-typed." This means the compiler is aware of data-types at compile-time. Python and JavaScript are *not* statically-typed but C, Java, Haskell, and Rust /are/.
+Certain languages are "statically-typed." This means the compiler is aware of data-types at compile-time. Python and JavaScript are *not* statically-typed but C, Java, Haskell, and Rust /are/.
 * Curry-Howard correspondence
 There's a thing called the Curry-Howard correspondence. (Also called the Curry-Howard isomorphism) It states that statically-typed computer programs are isomorphic with mathematical proofs. By "isomorphic," this means that each program has an equivalent proof, and each proof has an equivalent program. Every program can be thought of as a proof. and every proof can be thought of as a program.
 
