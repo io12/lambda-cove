@@ -26,7 +26,7 @@ As it turns out, the propositions \[\forall x \in A, B\] and \[A \to B\] are ide
 ** Forall and function types
 Just like implication, forall is /also/ isomorphic with function types. A proposition \[\forall x \in A, B\] is isomorphic with the type of a function that takes a parameter \[x\] of type \[A\] and returns a parameter of type \[B\]. Because \[B\] can /depend/ on \[x\], the function's return type \[B\] can /depend/ on the value of its parameter \[x\]. This is where the name "dependent type" comes from. Forall (when considered a type instead of a proposition) is a dependent type, since a type can depend on a value.
 *** Are arrays dependent types?
-Certain languages like Java and Rust have array types where the length of the array is part of the type. Examples are ~char[10]~ in Java and ~[char; 10]~ in Rust. While /could/ be considered dependent types because a type depends on a value, this isn't general enough to be isomorphic with forall.
+Certain languages like Java and Rust have array types where the length of the array is part of the type. Examples are ~char[10]~ in Java and ~[char; 10]~ in Rust. While these arrays /could/ be considered dependent types because a type depends on a value, this isn't general enough to be isomorphic with forall.
 ** QED
 It turns out that type systems with all these features are enough to be isomorphic with all of higher-order logic. There are other logical constructs, like biconditional \[\leftrightarrow\], not \[\lnot\], and \[\land\], or \[\lor\], exists \[\exists\]. These can all be implemented with the tools above.
 * TODO
