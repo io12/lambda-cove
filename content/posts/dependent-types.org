@@ -25,7 +25,7 @@ As it turns out, the propositions \[\forall x \in A, B\] and \[A \to B\] are ide
 Just like implication, forall is /also/ isomorphic with function types. A proposition \[\forall x \in A, B\] is isomorphic with the type of a function that takes a parameter \[x\] of type \[A\] and returns a parameter of type \[B\]. Because \[B\] can /depend/ on \[x\], the function's return type \[B\] can /depend/ on the value of its parameter \[x\]. This is where the name "dependent type" comes from. Forall (when considered a type instead of a proposition) is a dependent type, since a type depends on a value.
 *** Are arrays dependent types?
 Certain languages like Java and Rust have array types where the length of the array is part of the type. Examples are ~char[10]~ in Java and ~[char; 10]~ in Rust. While these arrays /could/ be considered dependent types because a type depends on a value, this isn't general enough to be isomorphic with forall.
-** QED
+** Other logical constructs
 Type systems with these features are enough to be isomorphic with higher-order logic. There /are/ other logical constructs, like biconditional \[\leftrightarrow\], not \[\lnot\], and \[\land\], or \[\lor\], exists \[\exists\]. These can be implemented with the tools above.
 * Implementing other logical constructs with the tools above
 ** Not
@@ -38,3 +38,5 @@ Type systems with these features are enough to be isomorphic with higher-order l
 \[A \lor B \equiv \forall C \in \text{PROP}, (A \to C) \land (B \to C) \to C\]
 ** Exists
 \[\exists x \in A, B \equiv \lnot \forall x \in A, \lnot B\]
+* QED
+Those are the basics of dependent types and how they can be used for propositions and proofs. However, in order to define data types like natural numbers, lists, and integers, other language features are needed. Dependently-typed languages like Coq and Idris have "inductive types" which allow inductive proofs on arbitrary data types. These languages also have a tactic syntax, which allows proof construction using a familiar list of steps like ~intros~, ~destruct not~, and ~reflexivity~. I might write about these features in a future post.
