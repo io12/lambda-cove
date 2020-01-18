@@ -3,8 +3,6 @@ languageCode = "en-us"
 title = "Lambda Cove"
 theme = "hugo-xmin"
 
-disableKinds = ["taxonomyTerm"]
-
 [params]
 footer = """[Site Code](https://github.com/io12/lambda-cove)
 | [Email](mailto:blevy@protonmail.com)
