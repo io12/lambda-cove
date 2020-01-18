@@ -1,5 +1,5 @@
 #+title: Dependent Types Demystified
-#+date: 2020-01-15
+#+date: 2020-01-17
 #+tags[]: types
 
 * Static typing
