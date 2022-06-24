@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: lambdacove.netlify.app
+Token: a2c47ab1b2e04dd1a67f992467e8154a06c14701869f92aca68059ae0057c03c
