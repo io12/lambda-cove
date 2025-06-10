@@ -1,0 +1,14 @@
+title = "Lambda Cove"
+base_url = "https://lambda-cove.net"
+
+compile_sass = true
+generate_feeds = true
+
+[markdown]
+highlight_code = false
+highlight_theme = "inspired-github"
+smart_punctuation = true
+extra_syntaxes_and_themes = ["syntaxes"]
+
+[extra]
+# Put all your custom variables here

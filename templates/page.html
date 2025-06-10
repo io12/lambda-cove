@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} | {{ super() }}{% endblock %}
+
+{% block main %}
+{%- if not page.extra.menu %}
+<h1>{{ page.title }}</h1>
+<div class="meta">
+  {%- if page.date %}
+  <div class="post-date">
+    <i>
+      <time datetime='{{ page.date | date(format='%B %d, %Y') }}' pubdate>
+        {{- page.date | date(format='%B %d, %Y') -}}
+      </time>
+    </i>
+  </div>
+  {%- endif %}
+</div>
+{%- endif %}
+<main>
+  {{ page.content | safe }}
+  <hr/>
+</main>
+<p class="tags">
+  {%- if page.taxonomies %}
+  {%- for name, taxon in page.taxonomies %}
+  {{ name | capitalize }}:
+  {%- for item in taxon %}
+  <a href="{{ get_taxonomy_url(kind=name, name=item) }}">#{{ item }}</a>
+  {%- endfor %}
+  {%- endfor %}
+  {%- endif %}
+</p>
+{% endblock %}
