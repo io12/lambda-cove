@@ -14,6 +14,8 @@ This post assumes some familiarity with typed functional programming, Lisp, and 
 <p class="first-paragraph" data-first-letter="T">
 Today we will attempt to write a truth oracle in Lisp.
 By "truth oracle," I mean a program that can determine whether arbitrary mathematical statements are true or false.
+This might sound impossible, due to first-order logic being undecidable,
+but let's try anyway.
 </p>
 
 Before that, though, we need to go over some required concepts.
@@ -221,7 +223,8 @@ fun (peirce : forall A B : Type, ((A -> B) -> A) -> A)
          (A \/ ~ A)
          False
          (fun (not_em : A \/ ~ A -> False)
-              => or_intror ((fun a : A => not_em (or_introl a)) : ~ A)
+              => or_intror
+                 ((fun a : A => not_em (or_introl a)) : ~ A)
          )
 ```
 
