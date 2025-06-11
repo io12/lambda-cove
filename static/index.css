@@ -1,6 +1,8 @@
 :root {
   --container-background-color: 0;
   --code-font-size: 22px;
+  --border-width: 2px;
+  --border-radius: 0px;
 }
 
 .katex {
@@ -17,7 +19,7 @@ table, th, td {
   border-collapse: collapse;
 }
 table {
-  outline: 1px solid black;
+  outline: var(--border-width) solid black;
 }
 th, td {
   border: 1px solid lightgray;
@@ -48,7 +50,8 @@ td:last-child, th:last-child {
   text-decoration: none;
   padding: 5px;
   border: solid;
-  border-width: 1px;
+  border-width: var(--border-width);
+  border-radius: var(--border-radius);
   border-color: black;
   background-color: var(--container-background-color);
 }
@@ -71,12 +74,14 @@ code {
   padding: 1px 3px;
   font-family: Inconsolata, monospace;
   border: solid;
-  border-width: 1px;
+  border-width: var(--border-width);
+  border-radius: var(--border-radius);
   border-color: black;
   white-space: nowrap;
 }
 p code {
   font-size: var(--code-font-size);
+  border-width: 1px;
 }
 
 pre code {
@@ -159,7 +164,8 @@ hr::before {
   line-height: 1.6;
   position: relative;
   border-style: solid;
-  border-width: 1px;
+  border-width: var(--border-width);
+  border-radius: var(--border-radius);
 }
 
 .note::before {
@@ -217,7 +223,8 @@ blockquote {
   background-color: var(--container-background-color);
   position: relative;
   border-style: solid;
-  border-width: 1px;
+  border-width: var(--border-width);
+  border-radius: var(--border-radius);
 }
 
 blockquote::before {
