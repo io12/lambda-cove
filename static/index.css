@@ -17,6 +17,10 @@ table, th, td {
   margin: 0 auto;
   padding: 8px;
   border-collapse: collapse;
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 table {
   outline: var(--border-width) solid black;
