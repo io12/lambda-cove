@@ -1,0 +1,247 @@
+:root {
+  --container-background-color: 0;
+  --code-font-size: 22px;
+  --border-width: 2px;
+  --border-radius: 0px;
+}
+
+.katex {
+  font-size: 1em !important;
+}
+
+a {
+  color: black;
+}
+
+table, th, td {
+  margin: 0 auto;
+  padding: 8px;
+  border-collapse: collapse;
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+table {
+  outline: var(--border-width) solid black;
+}
+th, td {
+  border: 1px solid lightgray;
+}
+tr:first-child th, tr:first-child td {
+  border-top: none;
+}
+tr:last-child td {
+  border-bottom: none;
+}
+td:first-child, th:first-child {
+  border-left: none;
+}
+td:last-child, th:last-child {
+  border-right: none;
+}
+
+.menu {
+  text-align: center;
+}
+
+.menu li {
+  display: inline-block;
+  padding: 5px;
+}
+
+.menu a {
+  text-decoration: none;
+  padding: 5px;
+  border: solid;
+  border-width: var(--border-width);
+  border-radius: var(--border-radius);
+  border-color: black;
+  background-color: var(--container-background-color);
+}
+
+body {
+  max-width: 800px;
+  margin: auto;
+  padding: 1em;
+  font-size: 24px;
+  font-family: 'EBGaramond', 'FreeSerif subset', serif;
+  padding-top: 0px;
+}
+
+p {
+  line-height: 1.5em;
+}
+
+code {
+  background-color: var(--container-background-color);
+  padding: 1px 3px;
+  font-family: Inconsolata, monospace;
+  border: solid;
+  border-width: var(--border-width);
+  border-radius: var(--border-radius);
+  border-color: black;
+  white-space: nowrap;
+}
+p code {
+  font-size: var(--code-font-size);
+  border-width: 1px;
+}
+
+pre code {
+  display: block;
+  overflow-x: auto;
+  white-space: pre;
+  padding: 2px 10px;
+  line-height: 1.3em;
+  font-size: var(--code-font-size);
+}
+
+@font-face {
+  font-family: 'EBGaramond';
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: block;
+  src: url(/fonts/EB-Garamond.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'EBGaramond';
+  font-style: italic;
+  font-weight: 400 800;
+  font-display: block;
+  src: url(/fonts/EB-Garamond-italic.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Inconsolata';
+  font-style: normal;
+  font-weight: 200 900;
+  font-stretch: 100%;
+  font-display: block;
+  src: url(/fonts/Inconsolata.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'EBGaramond-InitialsF1';
+  font-display: block;
+  src: url('/fonts/EBGaramond-InitialsF1.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'EBGaramond-InitialsF2';
+  font-display: block;
+  src: url('/fonts/EBGaramond-InitialsF2.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: block;
+  font-family: 'FreeSerif subset';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/FreeSerif-subset.woff2') format('woff2');
+}
+
+/* Style hr with text ornaments */
+hr {
+  border: none;
+  text-align: center;
+  margin: 3em 0;
+}
+hr::before {
+  content: "☙ 𝜆 ❧";
+  display: inline-block;
+  padding: 0 1em;
+  color: #777;
+  position: relative;
+  z-index: 1;
+  transform: translateY(-50%);
+  letter-spacing: 0.5em;
+  font-size: min(50px, 12vw);
+}
+
+.note {
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  background-color: var(--container-background-color);
+  font-family: inherit;
+  line-height: 1.6;
+  position: relative;
+  border-style: solid;
+  border-width: var(--border-width);
+  border-radius: var(--border-radius);
+}
+
+.note::before {
+  content: "Note";
+  margin-right: 0.5rem;
+  font-weight: bold;
+  padding-left: 1.6em;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='currentColor'%3E%3Cpath d='M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336l24 0 0-64-24 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l48 0c13.3 0 24 10.7 24 24l0 88 8 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-80 0c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 1.2em 1.2em;
+}
+
+.note p {
+  margin: 0.5rem 0;
+}
+
+.note p:first-child {
+  margin-top: 0.2em;
+}
+
+.note p:last-child {
+  margin-bottom: 0;
+}
+
+/* Drop caps */
+.first-paragraph {
+  position: relative;
+  padding-top: 0.2em;
+
+  &::first-letter {
+    /* font-weight: bold; */
+    font-size: 4em;
+    float: left;
+    margin: 0.15em 0.05em 0 0;
+    font-family: 'EBGaramond-InitialsF2', serif;
+    font-display: block;
+    line-height: 0.83em;        /* Fix alignment in Chrome */
+  }
+  &::before {
+    margin: 0.15em 0.05em 0 0;
+    font-size: 4em;
+    font-family: 'EBGaramond-InitialsF1', serif;
+    content: attr(data-first-letter);
+    color: gray;
+    position: absolute;
+    left: 0;
+    top: 0.28em;
+  }
+}
+
+blockquote {
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  background-color: var(--container-background-color);
+  position: relative;
+  border-style: solid;
+  border-width: var(--border-width);
+  border-radius: var(--border-radius);
+}
+
+blockquote::before {
+  content: "Quote";
+  margin-right: 0.5rem;
+  font-weight: bold;
+  padding-left: 1.6em;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' fill='currentColor'%3E%3Cpath d='M0 216C0 149.7 53.7 96 120 96l8 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-8 0c-30.9 0-56 25.1-56 56l0 8 64 0c35.3 0 64 28.7 64 64l0 64c0 35.3-28.7 64-64 64l-64 0c-35.3 0-64-28.7-64-64l0-32 0-32 0-72zm256 0c0-66.3 53.7-120 120-120l8 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-8 0c-30.9 0-56 25.1-56 56l0 8 64 0c35.3 0 64 28.7 64 64l0 64c0 35.3-28.7 64-64 64l-64 0c-35.3 0-64-28.7-64-64l0-32 0-32 0-72z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 1.2em 1.2em;
+}
+
+blockquote p:last-child {
+  margin-bottom: 0.1em;
+}
