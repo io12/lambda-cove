@@ -142,7 +142,6 @@ hr {
 hr::before {
   content: "☙ 𝜆 ❧";
   display: inline-block;
-  background: white;
   padding: 0 1em;
   color: #777;
   position: relative;
