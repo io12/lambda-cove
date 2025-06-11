@@ -57,10 +57,13 @@ body {
   max-width: 800px;
   margin: auto;
   padding: 1em;
-  line-height: 1.5em;
   font-size: 24px;
   font-family: 'EBGaramond', freeserif, serif;
   padding-top: 0px;
+}
+
+p {
+  line-height: 1.5em;
 }
 
 code {
